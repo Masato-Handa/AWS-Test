@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/Masato-Handa/AWS-Test
 cd FlaskApp/
 yum -y install python3 mysql
 pip3 install -r requirements.txt
