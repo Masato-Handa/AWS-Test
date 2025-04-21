@@ -1,6 +1,5 @@
 #!/bin/bash -ex
-wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO-GCNv2/FlaskApp.zip
-unzip FlaskApp.zip
+git clone https://github.com/your-username/your-repository-name.git
 cd FlaskApp/
 yum -y install python3 mysql
 pip3 install -r requirements.txt
