@@ -151,21 +151,20 @@ def home():
                             </div>
                         </div>
                         <div class="employee-actions">
-                            <a href="{{ url_for('view', employee_id=employee.id) }}" class="btn btn-sm btn-outline-primary action-btn">
-                                <i class="fas fa-user mr-1"></i> Profile
+                            <a href="{{ url_for('view', employee_id=employee.id) }}" class="btn btn-action btn-profile">
+                                <i class="fas fa-user"></i> Profile
                             </a>
-                            <a href="{{ url_for('edit', employee_id=employee.id) }}" class="btn btn-sm btn-outline-primary action-btn">
-                                <i class="fas fa-edit mr-1"></i> Edit
+                            <a href="{{ url_for('edit', employee_id=employee.id) }}" class="btn btn-action btn-edit">
+                                <i class="fas fa-edit"></i> Edit
                             </a>
-                            <a href="{{ url_for('delete', employee_id=employee.id) }}" class="btn btn-sm btn-outline-danger action-btn">
-                                <i class="fas fa-trash mr-1"></i> Delete
+                            <a href="{{ url_for('delete', employee_id=employee.id) }}" class="btn btn-action btn-delete">
+                                <i class="fas fa-trash"></i> Delete
                             </a>
                         </div>
                     </div>
                 </div>
             {% endfor %}
             </div>
-
         {% endblock %}
     """, employees=employees, badges=badges)
 
