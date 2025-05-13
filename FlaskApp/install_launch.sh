@@ -1,9 +1,4 @@
 #!/bin/bash -ex
-# Check if the FlaskApp directory exists
-if [ ! -d "FlaskApp" ]; then
-  git clone https://github.com/Masato-Handa/FlaskApplication
-fi
-
 #cd to flaskapp directory after cloning
 cd FlaskApplication/FlaskApp/
 
