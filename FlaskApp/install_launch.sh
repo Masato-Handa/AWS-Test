@@ -12,4 +12,4 @@ export DYNAMO_MODE=on
 FLASK_APP=application.py /usr/local/bin/flask run --host=0.0.0.0 --port=8080
 
 systemctl enable amazon-ssm-agent
-systemctl start amazon-sim-agent
+systemctl start amazon-ssm-agent
