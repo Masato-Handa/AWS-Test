@@ -4,4 +4,5 @@ mysql_connector_python
 boto3
 pillow
 requests
+python-dotenv
 
