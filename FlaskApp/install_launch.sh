@@ -2,6 +2,7 @@
 
 #install dependencies
 sudo yum -y install python3 
+sudo yum install -y python3-pip
 sudo pip3 install -r requirements.txt
 sudo amazon-linux-extras install epel
 sudo yum -y install stress
