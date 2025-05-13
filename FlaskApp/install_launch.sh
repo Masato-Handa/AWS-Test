@@ -1,6 +1,4 @@
 #!/bin/bash -ex
-#cd to flaskapp directory after cloning
-cd FlaskApplication/FlaskApp/
 
 #install dependencies
 sudo yum -y install python3 mysql
