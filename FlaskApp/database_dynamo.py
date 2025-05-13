@@ -7,7 +7,7 @@ def list_employees():
     "Select all the employees from the database"
     try:
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  
-        table = dynamodb.Table('Employees')
+        table = dynamodb.Table('EmployeeTable')
         return table.scan()["Items"]
     except:
         return 0
@@ -16,7 +16,7 @@ def load_employee(employee_id):
     "Select one the employee from the database"
     try:
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  
-        table = dynamodb.Table('Employees')
+        table = dynamodb.Table('EmployeeTable')
         response = table.get_item(
             Key={
                 'id': employee_id
@@ -30,7 +30,7 @@ def add_employee(object_key, full_name, location, job_title, badges):
     "Add an employee to the database"
     try:
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  
-        table = dynamodb.Table('Employees')
+        table = dynamodb.Table('EmployeeTable')
         item = {
             'id': str(uuid.uuid4()),
             'full_name': full_name,
@@ -54,7 +54,7 @@ def update_employee(employee_id, object_key, full_name, location, job_title, bad
     "Update an employee to the database"
     try:
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  
-        table = dynamodb.Table('Employees')
+        table = dynamodb.Table('EmployeeTable')
         item = {
             'full_name': {'Value': full_name, 'Action': 'PUT'},
             'job_title': {'Value': job_title, 'Action': 'PUT'},
@@ -80,7 +80,7 @@ def delete_employee(employee_id):
     "Delete an employee."
     try:
         dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  
-        table = dynamodb.Table('Employees')
+        table = dynamodb.Table('EmployeeTable')
         table.delete_item(
             Key={
                 'id': employee_id
