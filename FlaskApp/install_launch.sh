@@ -13,7 +13,7 @@ export AWS_DEFAULT_REGION=us-east-1
 export DYNAMO_MODE=on
 
 #start the flask app
-FLASK_APP=application.py /usr/local/bin/flask run --host=0.0.0.0 --port=8080
+FLASK_APP=application.py /usr/local/bin/flask run --host=0.0.0.0 --port=8080 &
 
 # Install the Amazon SSM Agent
 sudo yum install -y amazon-ssm-agent
