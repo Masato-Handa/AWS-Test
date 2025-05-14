@@ -8,7 +8,7 @@ sudo pip3 install -r requirements.txt
 sudo yum -y install stress
 
 #set environment variables
-export PHOTOS_BUCKET=${group8-employee-photos-bucket}
+export PHOTOS_BUCKET=group8-employee-photos-bucket
 export AWS_DEFAULT_REGION=us-east-1
 export DYNAMO_MODE=on
 
