@@ -331,5 +331,9 @@ def stress(seconds):
     subprocess.Popen(["stress", "--cpu", "8", "--timeout", seconds])
     return redirect(url_for("info"))
 
+@application.route("/health")
+def health_check():
+    return "OK", 200
+
 if __name__ == "__main__":
     application.run(debug=True)
