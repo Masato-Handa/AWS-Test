@@ -16,20 +16,6 @@ import util
 import database_dynamo as database
 
 session = boto3.Session()
-credentials = session.get_credentials()
-
-# Check if AWS credentials are available
-if credentials is None:
-    print("No AWS credentials found")
-else:
-    frozen = credentials.get_frozen_credentials()
-    print("Access Key:", frozen.access_key)
-    print("Secret Key:", frozen.secret_key)
-    
-    if frozen.token:
-        print("Session Token:", frozen.token)
-    else:
-        print("No session token (not using temporary credentials)")
 
 def get_instance_document():
     try:
