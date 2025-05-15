@@ -1,4 +1,4 @@
-"Demo Flask application"
+
 import json
 import os
 import subprocess
@@ -14,8 +14,6 @@ import config
 import util
 
 import database_dynamo as database
-
-session = boto3.Session()
 
 def get_instance_document():
     try:
